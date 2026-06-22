@@ -66,3 +66,5 @@ setup.py
 crabguard-1.0.0-py3-none-any.whl
 crabguard-1.0.0.tar.gz
 crabguard-1.0.0/
+*.whl
+*.tar.gz
