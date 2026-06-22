@@ -1,0 +1,73 @@
+[build-system]
+requires      = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name        = "crabguard"
+version     = "1.0.1"
+description = "Enterprise web security scanner - Burp Suite + OWASP ZAP alternative with beautiful reports"
+readme      = "README.md"
+license     = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+keywords = [
+  "security", "web security", "penetration testing", "vulnerability scanner",
+  "owasp", "burp suite", "zap", "sqli", "xss", "pentest", "appsec",
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: System Administrators",
+  "Topic :: Security",
+  "Topic :: Internet :: WWW/HTTP",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0",
+  "click>=8.1.0",
+  "urllib3>=2.0.0",
+]
+
+[project.optional-dependencies]
+pdf  = ["weasyprint>=60.0"]
+dev  = ["pytest>=7.0", "pytest-cov", "build", "twine", "black", "ruff"]
+all  = ["crabguard[pdf,dev]"]
+
+[project.urls]
+Homepage      = "https://ashishjsharda.github.io/crabguard"
+Documentation = "https://ashishjsharda.github.io/crabguard"
+Repository    = "https://github.com/ashishjsharda/crabguard"
+"Bug Tracker" = "https://github.com/ashishjsharda/crabguard/issues"
+Changelog     = "https://github.com/ashishjsharda/crabguard/blob/main/CHANGELOG.md"
+
+[project.scripts]
+crabguard = "crabguard.cli:main"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["crabguard*"]
+
+[tool.setuptools.package-data]
+crabguard = ["py.typed"]
+
+[tool.black]
+line-length    = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+select      = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "-v --cov=crabguard --cov-report=term-missing"

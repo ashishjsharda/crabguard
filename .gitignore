@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual envs
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+htmlcov/
+*.cover
+
+# Reports (generated output — don't commit)
+crabguard-*.html
+crabguard-*.pdf
+crabguard-*.json
+*-report.html
+*-report.pdf
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Secrets — NEVER commit these
+.env.local
+.env.production
+secrets.py
+api_keys.txt
+
+# Internal / founder-only files — not for public repo
+LAUNCH_CHECKLIST.md
+example_usage.py
+setup.py
+
+# Old dist files left over from builds (keep dist/ clean via above rules)
+crabguard-1.0.0-py3-none-any.whl
+crabguard-1.0.0.tar.gz
+crabguard-1.0.0/
