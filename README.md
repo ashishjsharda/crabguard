@@ -3,9 +3,11 @@
 **Enterprise web security scanner. Burp Suite + OWASP ZAP — without the $400/year license.**
 
 [![PyPI version](https://badge.fury.io/py/crabguard.svg)](https://badge.fury.io/py/crabguard)
+[![Downloads](https://img.shields.io/pypi/dm/crabguard?label=downloads)](https://pypi.org/project/crabguard/)
+[![Downloads](https://img.shields.io/pypi/dw/crabguard?label=downloads)](https://pypi.org/project/crabguard/)
 [![Python](https://img.shields.io/pypi/pyversions/crabguard)](https://pypi.org/project/crabguard/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub](https://img.shields.io/badge/GitHub-ashishjsharda%2Fcrabguard-181717?logo=github)](https://github.com/ashishjsharda/crabguard)
+[![GitHub Stars](https://img.shields.io/github/stars/ashishjsharda/crabguard?style=social)](https://github.com/ashishjsharda/crabguard)
 
 ```bash
 pip install crabguard
